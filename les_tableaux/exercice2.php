@@ -5,10 +5,10 @@
 <table align=center border=1>
 <tr align=center>
   <td bgcolor=sandybrown> 
-    <b>Pays</b>
+    <b>Capitales</b>
   </td>
   <td bgcolor=gold> 
-     <b>Capitales</b> 
+     <b>Pays</b> 
   </td>
 </tr>
 
@@ -74,16 +74,37 @@ $capitales = array(
     "Vilnius" => "Lituanie",
     "Zagreb" => "Croatie"
 );
+
+// Compte le nombre de pays:
+$nombredepays = count($capitales); 
+
+
+// Pays par ordre alphabétique:
 asort($capitales);
 
-foreach ($capitales as $pays => $nomcapitale)
+// Capitales par ordre alphabétique:
+// ksort($capitales);
+
+$i = 0;
+
+foreach ($capitales as $nomcapitale => $pays)
 {
+  if ($nomcapitale[0] == "B") {
+    unset($nomcapitale);
+    // var_dump("OK");
+  }
+  else{
   echo "<tr align=center>";
-  echo "<td bgcolor=sandybrown> $nomcapitale  </td>";
-  echo "<td bgcolor=gold>  $pays </td>";
+  echo "<td bgcolor=sandybrown>$nomcapitale</td>";
+  echo "<td bgcolor=gold>$pays</td>";
   echo "</tr>";
+
+  $i++;
 }
 
+}
+
+echo "Il y a <b>$i</b> pays.";
 
 ?>
 </table> 

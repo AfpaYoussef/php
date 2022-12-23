@@ -7,9 +7,9 @@
     <title>Nous contacter</title>
 </head>
 <body>
-
+    
     <p><h1>Vos coordonnées :</h1></p>
-    <p style="color:brown"><strong><h> * Ces zones sont obligatoires pour envoyer le formulaire.</h></strong></p>
+    <p style="color:brown"><strong><h>* Ces zones sont obligatoires pour envoyer le formulaire.</h></strong></p>
 
     <form name="form3" method="post" action="exercice.php"> 
         <div  style="line-height: 2.5rem;">

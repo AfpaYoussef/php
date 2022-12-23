@@ -21,8 +21,8 @@
             <label ><strong>Ville:  </strong><input type="text" name="choix4" value="" id="ville"/></label><label style="color:red"> *</label><br/>
             <label ><strong>E-mail:  </strong><input type="text" name="choix5" value="" id="email"/></label><label style="color:red"> *</label><br/>
             <label ><strong>Téléphone:  </strong><input type="text" name="choix6" value=""/></label><br/>
-            <label ><strong>Tapez ou sélectionnez l'environnement technique du projet:  </strong><textarea  type="text" name="choix" id="targetValue" value=""></textarea></label><br>
-            <select name="Choix7" id="targetOption">
+            <label ><strong>Tapez ou sélectionnez l'environnement technique du projet:  </strong><textarea  type="text" name="choix7" id="targetValue" value=""></textarea></label><br>
+            <select name="Choix" id="targetOption">
                 <option value="">Sélectionnez</option>
                 <option value="Access">Access</option>
                 <option value="Java">Java</option>

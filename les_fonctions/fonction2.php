@@ -1,4 +1,4 @@
-<!-- Ecrivez une fonction qui calcul la somme des valeurs d'un tableau -->
+<!-- Ecrivez une fonction qui calcule la somme des valeurs d'un tableau -->
 
 <!-- <-- Utilisation d'une fonction native -->
 

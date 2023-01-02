@@ -1,5 +1,5 @@
 
-<!-- Ecrivez une fonction qui permette de générer un lien. -->
+<!-- Ecrivez une fonction qui permet de générer un lien. -->
 
 <?php
 

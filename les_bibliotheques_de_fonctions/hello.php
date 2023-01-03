@@ -6,7 +6,7 @@
         include("fonctions.php");
     } 
     else{
-        echo "le fichier demandé n'existe pas.";
+        echo "Le fichier demandé n'existe pas.";
         exit;
     }
     $message = "Hello world !";

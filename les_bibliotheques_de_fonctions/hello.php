@@ -1,26 +1,30 @@
 <?php
     // Fichier 'hello.php'
 
-    function writeMessage($text) {
-    $html = "<h1>".$text."</h1>";
-    echo $html;
-    }  
+    if (file_exists("fonctions.php") ) 
+    {
+        include("fonctions.php");
+    } 
+    else{
+        echo "le fichier demandé n'existe pas.";
+        exit;
+    }
+    $message = "Hello world !";
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html>
     <head>
         <title>Inclusion de fichiers PHP</title>
-        <link rel="stylesheet" href="css/style.css">        
     </head>
-    <body>
+    <body> 
         <?php 
-            $message= "Welcome to AFPA !"; 
             writeMessage($message); 
         ?>
         <br>
         <?php 
             writeMessage("Bonjour tout le monde !"); 
         ?>
+    <script src="js/scripts.js"></script>
     </body>
 </html>

@@ -6,7 +6,7 @@
     $db = connexionBase();
 
     // on lance une requête pour chercher toutes les fiches d'artistes
-    $requete = $db->query("SELECT * FROM artist");
+    $requete = $db->query("SELECT * FROM disc");
     // on récupère tous les résultats trouvés dans une variable
     $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
     // var_dump($tableau);
@@ -27,19 +27,32 @@
     <table>
         <tr>
             <th>ID</th>
-            <th>Nom</th>
+            <th>Titre</th>
+            <th>Année</th>
+            <th>Disque</th>
+            <th>Label</th>
+            <th>Genre</th>
+            <th>Prix</th>
+            <th>Artist ID</th>
             <!-- Ici, on ajoute une colonne pour insérer un lien -->
             <th></th>
         </tr>
 
-        <?php foreach ($tableau as $artist): ?>
+        <?php foreach ($tableau as $disc): ?>
 
         <?php //var_dump($artist); // Le var_dump() est écrit à titre informatif ?>
         <tr>
-            <td><?= $artist->artist_id ?></td>
-            <td><?= $artist->artist_name ?></td>
+            <td><?= $disc->disc_id ?></td>
+            <td><?= $disc->disc_title ?></td>
+            <td><?= $disc->disc_year ?></td>
+            <td><?= $disc->disc_picture ?></td>
+            <td><?= $disc->disc_label ?></td>
+            <td><?= $disc->disc_genre ?></td>
+            <td><?= $disc->disc_price ?></td>
+            <td><?= $disc->artist_id ?></td>
+            
             <!-- Ici, on ajoute un lien par artiste pour accéder à sa fiche : -->
-            <td><a href="artist_detail.php?id=<?= $artist->artist_id ?>">Détail</a></td>
+            <td><a href="artist_detail.php?id=<?= $disc->disc_id ?>">Détails</a></td>
         </tr>
 
         <?php endforeach; ?>

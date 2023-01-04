@@ -21,11 +21,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>PDO - Liste</title>
 </head>
 <body>
+    <a href="#" class="btn btn-success">Ajouter</a>
+   
     <table>
-    <caption>Liste des disques</caption>
+          <caption>Liste des disques</caption>
         <tr>
             <th>ID</th>
             <th>Titre</th>
@@ -35,6 +39,7 @@
             <th>Genre</th>
             <th>Prix</th>
             <th>Artist ID</th>
+        
             <!-- Ici, on ajoute une colonne pour insérer un lien -->
             <th></th>
         </tr>

@@ -25,6 +25,7 @@
 </head>
 <body>
     <table>
+    <caption>Liste des disques</caption>
         <tr>
             <th>ID</th>
             <th>Titre</th>
@@ -45,7 +46,7 @@
             <td><?= $disc->disc_id ?></td>
             <td><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
-            <td><?= $disc->disc_picture ?></td>
+            <td><img src='<?= $disc->disc_picture ?>'></td>
             <td><?= $disc->disc_label ?></td>
             <td><?= $disc->disc_genre ?></td>
             <td><?= $disc->disc_price ?></td>

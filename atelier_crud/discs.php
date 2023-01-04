@@ -26,7 +26,7 @@
     <title>PDO - Liste</title>
 </head>
 <body>
-    <a href="#" class="btn btn-success">Ajouter</a>
+    <a href="/atelier_crud/disc_new.php" class="btn btn-success">Ajouter</a>
    
     <table>
           <caption>Liste des disques</caption>

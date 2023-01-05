@@ -36,7 +36,7 @@
         Genre : <?= $myDisc->disc_genre ?>
         Price : <?= $myDisc->disc_price ?>
         
-        Picture :<img src='img/<?= $myDisc->disc_picture ?>'width='5%'>
+        Picture :<img src='/atelier_crud/img/<?= $myDisc->disc_picture ?>'width='5%'>
 
 
 

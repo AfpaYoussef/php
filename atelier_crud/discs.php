@@ -51,7 +51,7 @@
             <td><?= $disc->disc_id ?></td>
             <td><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
-            <td><img src='img/<?= $disc->disc_picture ?>' width='20%'></td>
+            <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='20%'></td>
             <td><?= $disc->disc_label ?></td>
             <td><?= $disc->disc_genre ?></td>
             <td><?= $disc->disc_price ?></td>

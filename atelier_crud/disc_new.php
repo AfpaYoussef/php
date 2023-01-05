@@ -30,7 +30,7 @@
     <br>
     <br>
 
-    <form action ="script_artist_ajout.php" method="post">
+    <form action ="script_disc_ajout.php" method="post">
 
         <label for="titre">Title :</label><br>
         <input type="text" name="letitre" placeholder="Enter title" id="title">
@@ -67,12 +67,12 @@
         <br><br>
 
         <label for="picture_for_label">Picture:</label><br>
-        <input type="file" value="Ajouter" placeholder="Choisir un fichier">
+        <input type="file" name="picture" value="Ajouter" placeholder="Choisir un fichier">
         <br><br>
 
+        
+        <input type="submit" value="Ajouter">
+        <a href="/atelier_crud/discs.php"><button type="button">Retour à la liste des artistes</button></a>
     </form>
-
-    <input type="submit" value="Ajouter">
-    <a href="/atelier_crud/discs.php"><button>Retour à la liste des artistes</button></a>
 </body>
 </html>

@@ -27,9 +27,9 @@
 </head>
 <body>
     <a href="/atelier_crud/disc_new.php" class="btn btn-success">Ajouter</a>
-   
+   <h1>Liste des disques</h1>
     <table>
-          <caption>Liste des disques</caption>
+          <caption></caption>
         <tr>
             <th>ID</th>
             <th>Titre</th>

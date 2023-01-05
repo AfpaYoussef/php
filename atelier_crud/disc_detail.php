@@ -35,7 +35,8 @@
         Artist : <?= $myDisc->artist_name ?>
         Genre : <?= $myDisc->disc_genre ?>
         Price : <?= $myDisc->disc_price ?>
-        Picture :<?= $myDisc->disc_picture ?>
+        
+        Picture :<img src='img/<?= $myDisc->disc_picture ?>'width='5%'>
 
 
 

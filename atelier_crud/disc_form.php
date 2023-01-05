@@ -20,8 +20,7 @@ $nouveau -> closeCursor();
 </head>
 <body>
     <h1>Modifier un vinyle</h1>
-    <br>
-    <br>
+    <br><br>
 
     <form action ="script_disc_modif.php" method="post">
         

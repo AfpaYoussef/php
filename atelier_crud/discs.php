@@ -58,7 +58,7 @@
             <td><?= $disc->artist_id ?></td>
             
             <!-- Ici, on ajoute un lien par artiste pour accéder à sa fiche : -->
-            <td><a href="artist_detail.php?id=<?= $disc->disc_id ?>">Détails</a></td>
+            <td><a href="/atelier_crud/disc_detail.php?id=<?= $disc->disc_id ?>">Détails</a></td>
         </tr>
 
         <?php endforeach; ?>

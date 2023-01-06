@@ -36,7 +36,7 @@
         $requete->closeCursor();
     }
 
-    catch (Exception $e) {
+    catch (Exception $j) {
         echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
         die("Fin du script (script_disc_modif.php)");
     }

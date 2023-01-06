@@ -5,7 +5,7 @@ $requete = $db->prepare("SELECT * FROM disc WHERE disc_id=?");
 $requete->execute(array($_GET["id"]));
 $disc = $requete->fetch(PDO::FETCH_OBJ);
 $requete->closeCursor();
-$nouveau = $db->query("SELECT artist_id, artist_name  FROM artist");
+$nouveau = $db->query("SELECT artist_id, artist_name FROM artist");
 $nouveau1 = $nouveau -> fetchAll(PDO::FETCH_OBJ);
 $nouveau -> closeCursor();
 ?>

@@ -32,7 +32,7 @@
         $requete->bindValue(":label", $d, PDO::PARAM_STR);
         $requete->bindValue(":genre", $e, PDO::PARAM_STR);
         $requete->bindValue(":price", $f, PDO::PARAM_STR);
-        
+
         $requete->execute();
         $requete->closeCursor();
     }

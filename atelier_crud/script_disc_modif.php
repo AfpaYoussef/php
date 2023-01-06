@@ -1,21 +1,18 @@
 <?php
     // Récupération des valeurs :
     $id = (isset($_POST['id']) && $_POST['id'] != "") ? $_POST['id'] : Null;
-    $nom = (isset($_POST['nom']) && $_POST['nom'] != "") ? $_POST['nom'] : Null;
-    $url = (isset($_POST['url']) && $_POST['url'] != "") ? $_POST['url'] : Null;
-    $nom = (isset($_POST['nom']) && $_POST['nom'] != "") ? $_POST['nom'] : Null;
-    $url = (isset($_POST['url']) && $_POST['url'] != "") ? $_POST['url'] : Null;
-    $nom = (isset($_POST['nom']) && $_POST['nom'] != "") ? $_POST['nom'] : Null;
-    $url = (isset($_POST['url']) && $_POST['url'] != "") ? $_POST['url'] : Null;
-
-
-
+    $a = (isset($_POST['title']) && $_POST['title'] != "") ? $_POST['title'] : Null;
+    $b = (isset($_POST['year']) && $_POST['year'] != "") ? $_POST['year'] : Null;
+    $c = (isset($_POST['picture']) && $_POST['picture'] != "") ? $_POST['picture'] : Null;
+    $d = (isset($_POST['label']) && $_POST['label'] != "") ? $_POST['label'] : Null;
+    $e = (isset($_POST['genre']) && $_POST['genre'] != "") ? $_POST['genre'] : Null;
+    $f = (isset($_POST['price']) && $_POST['price'] != "") ? $_POST['price'] : Null;
 
     // En cas d'erreur, on renvoie vers le formulaire
     if ($id == Null) {
         header("Location: discs.php");
     }
-    elseif ($nom == Null || $url == Null) {
+    elseif ($nom == Null || $a == Null || $b == Null|| $c == Null || $d == Null || $e == Null| $f == Null) {
         header("Location: disc_form.php?id=".$id);
         exit;
     }
@@ -26,16 +23,14 @@
 
     try {
         // Construction de la requête UPDATE sans injection SQL :
-        $requete = $db->prepare("UPDATE disc SET disc_title = :nom, artist_url = :url WHERE artist_id = :id;");
+        $requete = $db->prepare("UPDATE disc SET disc_title = :title, disc_year = :year, disc_pitcure = :picture, disc_label = :label, disc_genre = :genre, disc_price = :price WHERE disc_id = :id;");
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
-        $requete->bindValue(":nom", $nom, PDO::PARAM_STR);
-        $requete->bindValue(":url", $url, PDO::PARAM_STR);
-        $requete->bindValue(":nom", $nom, PDO::PARAM_STR);
-        $requete->bindValue(":url", $url, PDO::PARAM_STR);
-        $requete->bindValue(":nom", $nom, PDO::PARAM_STR);
-        $requete->bindValue(":url", $url, PDO::PARAM_STR);
-
-
+        $requete->bindValue(":title", $a, PDO::PARAM_STR);
+        $requete->bindValue(":year", $b, PDO::PARAM_STR);
+        $requete->bindValue(":picture", $c, PDO::PARAM_STR);
+        $requete->bindValue(":label", $d, PDO::PARAM_STR);
+        $requete->bindValue(":genre", $e, PDO::PARAM_STR);
+        $requete->bindValue(":price", $f, PDO::PARAM_STR);
 
         $requete->execute();
         $requete->closeCursor();

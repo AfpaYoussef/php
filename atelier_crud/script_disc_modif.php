@@ -12,6 +12,7 @@
     if ($id == Null) {
         header("Location: discs.php");
     }
+
     elseif ($nom == Null || $a == Null || $b == Null|| $c == Null || $d == Null || $e == Null| $f == Null) {
         header("Location: disc_form.php?id=".$id);
         exit;
@@ -31,7 +32,7 @@
         $requete->bindValue(":label", $d, PDO::PARAM_STR);
         $requete->bindValue(":genre", $e, PDO::PARAM_STR);
         $requete->bindValue(":price", $f, PDO::PARAM_STR);
-
+        
         $requete->execute();
         $requete->closeCursor();
     }

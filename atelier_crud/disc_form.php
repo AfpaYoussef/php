@@ -36,7 +36,7 @@ $nouveau -> closeCursor();
         <option value="" selected>Select your artist</option> 
         <?php foreach ($nouveau1 as $artist):?>
 
-          <option value=<?= $artist->artist_id ?>><?= $artist->artist_name ?></option>; 
+        <option value=<?= $artist->artist_id ?>><?= $artist->artist_name ?></option>; 
         
         <?php endforeach ;?> 
         </select>

@@ -89,7 +89,7 @@ try {
 }
 
 // Gestion des erreurs
-catch (Exception $e) {
+catch (Exception $j) {
     var_dump($requete->queryString);
     var_dump($requete->errorInfo());
     echo "Erreur : " . $requete->errorInfo()[2] . "<br>";

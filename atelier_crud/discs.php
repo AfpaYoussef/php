@@ -6,7 +6,7 @@
     $db = connexionBase();
 
     // on lance une requête pour chercher toutes les fiches d'artistes
-    $requete = $db->query("SELECT * FROM disc");
+    $requete = $db->query("SELECT * FROM disc JOIN artist ON artist.artist_id = disc.artist_id");
     // on récupère tous les résultats trouvés dans une variable
     $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
     // var_dump($tableau);
@@ -21,6 +21,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/atelier_crud/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>PDO - Liste</title>
@@ -34,6 +35,7 @@
             <th>ID</th>
             <th>Titre</th>
             <th>Année</th>
+            <th>Nom artiste</th>
             <th>Disque</th>
             <th>Label</th>
             <th>Genre</th>
@@ -51,6 +53,7 @@
             <td><?= $disc->disc_id ?></td>
             <td><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
+            <td><?= $disc->artist_name?></td>
             <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='20%'></td>
             <td><?= $disc->disc_label ?></td>
             <td><?= $disc->disc_genre ?></td>

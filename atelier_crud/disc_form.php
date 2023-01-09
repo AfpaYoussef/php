@@ -23,6 +23,8 @@ $nouveau -> closeCursor();
     <br><br>
 
     <form action ="script_disc_modif.php" method="post">
+
+        <input type="hidden" name="id" value="<?= $disc->disc_id ?>">
         
         <label for="nom_for_title">Title</label><br>
         <input type="text" name="title" id="title_for_label" value="<?= $disc->disc_title ?>">

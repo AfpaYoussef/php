@@ -18,7 +18,7 @@
         die("Fin du script (script_disc_modif.php)");
     }
 
-    // Si OK: redirection vers la page artists.php
+    // Si OK: redirection vers la page discs.php
     TrtRedirection:
     header("Location: discs.php");
     exit;

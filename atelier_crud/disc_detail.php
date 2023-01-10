@@ -42,9 +42,27 @@
 
 
         <a href="disc_form.php?id=<?= $myDisc->disc_id ?>"><button type="button">Modifier</button></a>
-        <a href="script_disc_delete.php?id=<?= $myDisc->disc_id ?>"><button type="button">Supprimer</button></a>
+        <a href="script_disc_delete.php?id=<?= $myDisc->disc_id ?>"><button type="button" id="delete_button">Supprimer</button></a>
         <a href="/atelier_crud/discs.php"><button type="button">Retour à la liste des artistes</button></a>
 
+       
+        
+          <script type="text/javascript">
+            
+            document.getElementById("delete_button").addEventListener('click', function(e){
+                var del = confirm("Etes-vous sûr de vouloir supprimer ces données ?");
+                if(del == true){
+                    alert("Données effacées");
+                }
+                
+                if (del == false){
+                    
+                    alert("Données non effacées");
+                    e.preventDefault();
+                }
 
+                return del;
+            });
+          </script>
     </body>
 </html>

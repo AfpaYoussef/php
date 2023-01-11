@@ -1,6 +1,10 @@
 body{
     background: #603f0b;
    }
+    
+   td{
+    height: 40px;
+}
    #container{
     width:400px;
     margin:0 auto;
@@ -21,7 +25,7 @@ body{
    }
    
    /* Full-width inputs */
-   input[type=text], input[type=password] {
+   input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -40,7 +44,26 @@ body{
     cursor: pointer;
     width: 100%;
    }
+   
+
+   input[type=reset] {
+   background-color: #560c1c;
+   color: rgb(98, 67, 48);
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+  }
+
+
    input[type=submit]:hover {
+    background-color: rgb(52, 191, 21);
+    color: #5359af;
+    border: 1px solid #97409a;
+   }
+
+   input[type=reset]:hover {
     background-color: rgb(132, 12, 12);
     color: #5359af;
     border: 1px solid #97409a;

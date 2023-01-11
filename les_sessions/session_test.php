@@ -20,18 +20,17 @@ $_SESSION["login"] = true;
 // Partie autorisation 
 if ($_SESSION["login"]) 
 {
-
    echo"Vous êtes autorisé à voir cette page.";  
 } 
 
 // sinon interdiction 
 else 
+
 {
-   echo"Cette page nécessite une identification.";  
+   echo "Cette page nécessite une identification.";  
 }
 
 ?>
-
 </body>
 </html>
 

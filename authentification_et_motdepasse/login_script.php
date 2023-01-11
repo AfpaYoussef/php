@@ -1,45 +1,39 @@
 <?php
-session_start();
-if(isset($_POST['username']) && isset($_POST['password']))
-{
- // connexion à la base de données
- $db_username = 'root';
- $db_password = 'mot_de_passe_bdd';
- $db_name = 'nom_bdd';
- $db_host = 'localhost';
- $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
- or die('could not connect to database');
- 
- // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
- // pour éliminer toute attaque de type injection SQL et XSS
- $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['username'])); 
- $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['password']));
- 
- if($username !== "" && $password !== "")
- {
- $requete = "SELECT count(*) FROM utilisateur where 
- nom_utilisateur = '".$username."' and mot_de_passe = '".$password."' ";
- $exec_requete = mysqli_query($db,$requete);
- $reponse = mysqli_fetch_array($exec_requete);
- $count = $reponse['count(*)'];
- if($count!=0) // nom d'utilisateur et mot de passe correctes
- {
- $_SESSION['username'] = $username;
- header('Location: pageouverture.php');
- }
- else
- {
- header('Location: login_form.php?erreur=1'); // utilisateur ou mot de passe incorrect
- }
- }
- else
- {
- header('Location: login_form.php?erreur=2'); // utilisateur ou mot de passe vide
- }
+
+$login=$_POST[''];
+$motdepasse=$_POST[''];
+
+// S'il n'y a pas eu de redirection vers le formulaire (= si la vérification des données est ok) :
+    require "db.php"; 
+    $db = connexionBase();
+
+
+try {
+    // Construction de la requête INSERT sans injection SQL (qui doit respecter l'ordre des colonnes de la table dans la base de données sans l'id) et VALUES (doit respecter cet ordre sans l'id) :
+    $requete = $db->query("SELECT * FROM `user`");
+
+    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+
+    // Libération de la requête (utile pour lancer d'autres requêtes par la suite) :
+    $requete->closeCursor();
+
+    foreach($tableau as $user){
+        if($user->mail = $login && password_verify($user->mot_de_passe, $motdepasse)){
+            header("location: /authentification_et_motdepasse/pageouverture.php");
+            exit;
+        }
+    }
 }
-else
-{
- header('Location: login_form.php');
+
+// Gestion des erreurs
+catch (Exception $j) {
+    var_dump($requete->queryString);
+    var_dump($requete->errorInfo());
+    echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
+    die("Fin du script (/authentification_et_motdepasse/login_script.php)");
 }
-mysqli_close($db); // fermer la connexion
+
+header("location: /authentification_et_motdepasse/login_form.php");
+exit;
+
 ?>

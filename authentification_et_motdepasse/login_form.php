@@ -2,7 +2,7 @@
  <head>
  <meta charset="utf-8">
 
- <link rel="stylesheet" href="/authentification_et_motdepasse/style.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
  </head>
  <body>
  <div id="container">

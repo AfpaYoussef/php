@@ -1,24 +1,26 @@
 <?php
 
-$login=$_POST[''];
-$motdepasse=$_POST[''];
+$login = $_POST['username'];
+$motdepasse = $_POST['password'];
 
 // S'il n'y a pas eu de redirection vers le formulaire (= si la vérification des données est ok) :
     require "db.php"; 
     $db = connexionBase();
 
-
 try {
     // Construction de la requête INSERT sans injection SQL (qui doit respecter l'ordre des colonnes de la table dans la base de données sans l'id) et VALUES (doit respecter cet ordre sans l'id) :
-    $requete = $db->query("SELECT * FROM `user`");
-
+    $requete = $db->query('SELECT * FROM user');
     $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
 
     // Libération de la requête (utile pour lancer d'autres requêtes par la suite) :
     $requete->closeCursor();
 
     foreach($tableau as $user){
-        if($user->mail = $login && password_verify($user->mot_de_passe, $motdepasse)){
+
+        $bmail = $user->mail;
+        $bmdp = $user->mot_de_passe;
+
+        if($bmail == $login && password_verify($motdepasse, $bmdp)){
             header("location: /authentification_et_motdepasse/pageouverture.php");
             exit;
         }
@@ -33,7 +35,8 @@ catch (Exception $j) {
     die("Fin du script (/authentification_et_motdepasse/login_script.php)");
 }
 
-header("location: /authentification_et_motdepasse/login_form.php");
+
+header("location: /login_form.php");
 exit;
 
 ?>

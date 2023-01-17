@@ -31,7 +31,7 @@
     <table>
           <caption></caption>
         <tr>
-            <th>ID</th>
+            <!-- <th>ID</th> -->
             <th>Titre</th>
             <th>Année</th>
             <th>Nom artiste</th>
@@ -39,7 +39,7 @@
             <th>Label</th>
             <th>Genre</th>
             <th>Prix</th>
-            <th>Artist ID</th>
+            <!-- <th>Artist ID</th> -->
         
             <!-- Ici, on ajoute une colonne pour insérer un lien -->
             <th></th>
@@ -49,7 +49,7 @@
 
         <?php //var_dump($artist); // Le var_dump() est écrit à titre informatif ?>
         <tr>
-            <td><?= $disc->disc_id ?></td>
+            <!-- <td><?= $disc->disc_id ?></td> -->
             <td><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
             <td><?= $disc->artist_name?></td>
@@ -57,7 +57,7 @@
             <td><?= $disc->disc_label ?></td>
             <td><?= $disc->disc_genre ?></td>
             <td><?= $disc->disc_price ?></td>
-            <td><?= $disc->artist_id ?></td>
+            <!-- <td><?= $disc->artist_id ?></td> -->
             
             <!-- Ici, on ajoute un lien par artiste pour accéder à sa fiche : -->
             <td><a href="/atelier_crud/disc_detail.php?id=<?= $disc->disc_id ?>">Détails</a></td>

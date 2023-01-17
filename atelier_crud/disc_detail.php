@@ -30,6 +30,8 @@
     </head>
     <body>
         <h1>Details</h1>
+
+        
         Title : <?= $myDisc->disc_title ?>
         Year : <?= $myDisc->disc_year ?>
         Label : <?= $myDisc->disc_label ?>

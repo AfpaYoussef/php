@@ -26,13 +26,14 @@
     <title>PDO - Liste</title>
 </head>
 <body>
-    <a href="/atelier_crud/disc_new.php" class="btn btn-success">Ajouter</a>
-   <h1>Liste des disques</h1>
+    <a href="/atelier_crud/disc_new.php" class="btn btn-primary">Ajouter</a>
+   <h1 align = "center">Liste des disques</h1>
+
     <table>
           <caption></caption>
-        <tr>
+        <tr class="border">
             <!-- <th>ID</th> -->
-            <th>Titre</th>
+            <th >Titre</th>
             <th>Année</th>
             <th>Nom artiste</th>
             <th>Disque</th>
@@ -48,19 +49,19 @@
         <?php foreach ($tableau as $disc): ?>
 
         <?php //var_dump($artist); // Le var_dump() est écrit à titre informatif ?>
-        <tr>
+        <tr class="border">
             <!-- <td><?= $disc->disc_id ?></td> -->
             <td><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
             <td><?= $disc->artist_name?></td>
-            <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='20%'></td>
+            <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='30%'></td>
             <td><?= $disc->disc_label ?></td>
             <td><?= $disc->disc_genre ?></td>
             <td><?= $disc->disc_price ?></td>
             <!-- <td><?= $disc->artist_id ?></td> -->
             
             <!-- Ici, on ajoute un lien par artiste pour accéder à sa fiche : -->
-            <td><a href="/atelier_crud/disc_detail.php?id=<?= $disc->disc_id ?>">Détails</a></td>
+            <td><a href="/atelier_crud/disc_detail.php?id=<?= $disc->disc_id ?>" class="btn btn-info">Détails</a></td>
         </tr>
 
         <?php endforeach; ?>

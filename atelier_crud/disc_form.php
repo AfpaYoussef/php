@@ -16,6 +16,7 @@ $nouveau -> closeCursor();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Modifier</title>
 </head>
 <body>
@@ -65,12 +66,12 @@ $nouveau -> closeCursor();
         <br><br>
 
         <label for="picture_for_label">Picture </label><br>
-        <input type="file" name="picture" id="picture1_for_label" >
+        <input type="file" name="picture" id="picture1_for_label" class="btn btn-secondary">
         <img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='20%'>
         <br><br>
 
-        <input type="submit" value="Modifier">
-        <a href="discs.php"><button type="button">Retour à la liste des artistes</button></a>
+        <input type="submit" value="Modifier" class="btn btn-warning">
+        <a href="discs.php" class="btn btn-success" >Retour à la liste des artistes</a>
 
     </form>
 

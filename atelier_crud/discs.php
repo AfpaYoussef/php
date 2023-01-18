@@ -33,7 +33,7 @@
           <caption></caption>
         <tr class="border">
             <!-- <th>ID</th> -->
-            <th >Titre</th>
+            <th>Titre</th>
             <th>Année</th>
             <th>Nom artiste</th>
             <th>Disque</th>
@@ -51,7 +51,7 @@
         <?php //var_dump($artist); // Le var_dump() est écrit à titre informatif ?>
         <tr class="border">
             <!-- <td><?= $disc->disc_id ?></td> -->
-            <td><?= $disc->disc_title ?></td>
+            <td ><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
             <td><?= $disc->artist_name?></td>
             <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' class="w-100% " style="height: 30px" ></td>

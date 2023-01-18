@@ -26,20 +26,18 @@
 </head>
 <body>
 
-    <h1>Ajouter un vinyle</h1>
+    <h1  align = "center">Ajouter un vinyle</h1><br>
 
-    <br>
-    <br>
-
+    <div align = "center">
     <form action ="script_disc_ajout.php" method="post">
 
-        <label for="titre">Title :</label><br>
+        <label for="titre"><h4>Title :</h4></label>
         <input type="text" name="letitre" placeholder="Enter title" id="title">
         <br><br>
 
 
 
-        <label for="url_for_label">Artist :</label><br>
+        <label for="url_for_label"><h4>Artist :</h4></label>
         <select name="lartiste" id="artiste">
         <option value="" selected>Select your artist</option> 
         <?php foreach ($tableau as $artist){
@@ -51,23 +49,23 @@
       
         <br><br>
 
-        <label for="year_for_label">Year :</label><br>
+        <label for="year_for_label"><h4>Year :</h4></label>
         <input type="text" name="yeardisc" placeholder="Year" id="year">
         <br><br>
 
-        <label for="genre_du_label">Genre:</label><br>
+        <label for="genre_du_label"><h4>Genre:</h4></label>
         <input type="text" name="genredisc" placeholder="Enter genre" id="genre_for_label">
         <br><br>
 
-        <label for="le_label">Label:</label><br>
+        <label for="le_label"><h4>Label:</h4></label>
         <input type="text" name="labeldisc" placeholder="Enter label (EMI, Warner, PolyGram, Univers Sale...)" id="label_for_label">
         <br><br>
 
-        <label for="price_for_label">Price :</label><br>
+        <label for="price_for_label"><h4>Price :</h4></label>
         <input type="text" name="pricedisc" id="pricelabel">
         <br><br>
 
-        <label for="picture_for_label">Picture:</label><br>
+        <label for="picture_for_label"><h4>Picture:</h4></label>
         <input type="file" name="picture" value="Ajouter" placeholder="Choisir un fichier" class="btn btn-secondary">
         <br><br>
 
@@ -75,5 +73,6 @@
         <input type="submit" value="Ajouter"  class="btn btn-primary">
         <a href="/atelier_crud/discs.php"  class="btn btn-success" >Retour à la liste des artistes</a>
     </form>
+    </div>
 </body>
 </html>

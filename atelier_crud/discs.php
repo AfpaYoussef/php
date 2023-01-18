@@ -27,9 +27,9 @@
 </head>
 <body>
     <a href="/atelier_crud/disc_new.php" class="btn btn-primary">Ajouter</a>
-   <h1 align = "center">Liste des disques</h1>
+   <h1 align = "center" >Liste des disques</h1>
 
-    <table>
+    <table align = "center">
           <caption></caption>
         <tr class="border">
             <!-- <th>ID</th> -->
@@ -54,7 +54,7 @@
             <td><?= $disc->disc_title ?></td>
             <td><?= $disc->disc_year ?></td>
             <td><?= $disc->artist_name?></td>
-            <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='30%'></td>
+            <td><img src='/atelier_crud/img/<?= $disc->disc_picture ?>' class="w-100% " style="height: 30px" ></td>
             <td><?= $disc->disc_label ?></td>
             <td><?= $disc->disc_genre ?></td>
             <td><?= $disc->disc_price ?></td>

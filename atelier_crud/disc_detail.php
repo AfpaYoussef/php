@@ -47,10 +47,11 @@
         </table>
 
 
-
+       <div align = center ><br>
         <a href="disc_form.php?id=<?= $myDisc->disc_id ?>" class="btn btn-warning" >Modifier</a>
         <a href="script_disc_delete.php?id=<?= $myDisc->disc_id ?>" class="btn btn-danger" id="delete_button">Supprimer</a><br><br>
         <a href="/atelier_crud/discs.php" class="btn btn-success" >Retour à la liste des artistes</a>
+       </div>
 
        
         

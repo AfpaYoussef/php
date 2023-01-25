@@ -1,11 +1,11 @@
 <?php
 require "db.php";
 $db = connexionBase();
-$requete = $db->prepare("SELECT * FROM disc WHERE disc_id=?");
+$requete = $db->prepare("SELECT * FROM disc JOIN artist ON disc.artist_id = artist.artist_id WHERE disc_id=?");
 $requete->execute(array($_GET["id"]));
 $disc = $requete->fetch(PDO::FETCH_OBJ);
 $requete->closeCursor();
-$nouveau = $db->query("SELECT artist_id, artist_name FROM artist");
+$nouveau = $db->query("SELECT * FROM artist");
 $nouveau1 = $nouveau -> fetchAll(PDO::FETCH_OBJ);
 $nouveau -> closeCursor();
 ?>
@@ -36,10 +36,10 @@ $nouveau -> closeCursor();
 
         <label for="artist_for_label"><h10>Artist:</h10></label>
         <select name="lartiste" id="artist_for_label">
-        <option value="" selected>Select your artist</option> 
+        <option value="<?= $disc->artist_id ?>"> <?= $disc->artist_name ?> </option> 
         <?php foreach ($nouveau1 as $artist):?>
 
-        <option value=<?= $artist->artist_id ?>><?= $artist->artist_name ?></option>; 
+        <option value="<?= $artist->artist_id ?>"><?= $artist->artist_name ?></option>; 
         
         <?php endforeach ;?> 
         </select>
@@ -63,7 +63,7 @@ $nouveau -> closeCursor();
         <br><br>
 
         <label for="picture_for_label"><h10>Picture:</h10></label>
-        <input type="file" name="picture" id="picture1_for_label" class="btn btn-secondary">
+        <input type="file" name="picture" id="picture1_for_label" class="btn btn-secondary" value="<?= $disc->disc_picture ?>">
         <img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='20%'>
         <br><br>
 

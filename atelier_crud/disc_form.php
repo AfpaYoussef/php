@@ -63,7 +63,8 @@ $nouveau -> closeCursor();
         <br><br>
 
         <label for="picture_for_label"><h10>Picture:</h10></label>
-        <input type="file" name="picture" id="picture1_for_label" class="btn btn-secondary" value="<?= $disc->disc_picture ?>">
+        <input type="file" name="picture" id="picture1_for_label" class="btn btn-secondary">
+        <input type="hidden" name="image"  value="<?= $disc->disc_picture ?>">
         <img src='/atelier_crud/img/<?= $disc->disc_picture ?>' width='20%'>
         <br><br>
 

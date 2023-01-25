@@ -3,13 +3,22 @@
     $id = (isset($_POST['id']) && $_POST['id'] != "") ? $_POST['id'] : Null;
     $a = (isset($_POST['title']) && $_POST['title'] != "") ? $_POST['title'] : Null;
     $b = (isset($_POST['year']) && $_POST['year'] != "") ? $_POST['year'] : Null;
-    $c = (isset($_POST['picture']) && $_POST['picture'] != "") ? $_POST['picture'] : Null;
     $d = (isset($_POST['label']) && $_POST['label'] != "") ? $_POST['label'] : Null;
     $e = (isset($_POST['genre']) && $_POST['genre'] != "") ? $_POST['genre'] : Null;
     $f = (isset($_POST['price']) && $_POST['price'] != "") ? $_POST['price'] : Null;
     $g = (isset($_POST['lartiste']) && $_POST['lartiste'] != "") ? $_POST['lartiste'] : Null;
-
     
+    if(isset($_POST['picture']) && $_POST['picture'] != ""){
+        $c=$_POST['picture']; 
+    }
+    else{
+        if(isset($_POST['image']) && $_POST['image'] != ""){
+            $c=$_POST['image']; 
+        }
+        else{
+            $c=Null;
+        }
+    }
 
     // En cas d'erreur, on renvoie vers le formulaire
     if ($id == Null) {

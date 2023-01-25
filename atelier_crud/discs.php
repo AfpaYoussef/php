@@ -27,7 +27,7 @@
 </head>
 <body>
     <a href="/atelier_crud/disc_new.php" class="btn btn-primary">Ajouter</a>
-   <h1 align = "center" >Liste des disques</h1>
+   <h1 align = "center" >Liste des disques (<?= count($tableau);?>)</h1>
 
     <table align = "center">
           <caption></caption>

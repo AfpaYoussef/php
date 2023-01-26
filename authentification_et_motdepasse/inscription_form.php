@@ -18,23 +18,23 @@
 			<table>
 				<tr>
 					<td><label><b>Nom:</b></label></td>
-					<td><input type="text" name="nom" placeholder="saisir votre nom"/> </td>
+					<td><input type="text" name="nom" placeholder="Saisir votre nom"/> </td>
 				</tr>
 				<tr>
 					<td><label><b>Prénom:</b></label></td>
-					<td><input type="text" name="prenom" placeholder="saisir votre prénom"/></td>
+					<td><input type="text" name="prenom" placeholder="Saisir votre prénom"/></td>
 				</tr>
 				<tr>
 					<td><label><b>Email:</b></label></td>
-					<td><input type="email" name="email"placeholder="saisir votre adresse email"/></td>
+					<td><input type="email" name="email"placeholder="Saisir votre adresse email"/></td>
 				</tr>
                 <tr>
 					<td><label><b>Mot de passe:</b></label></td>
-					<td><input type="password" name="motdepasse" placeholder="saisir votre mot de passe"/></td>
+					<td><input type="password" name="motdepasse" placeholder="Saisir votre mot de passe"/></td>
 				</tr>
 
                 <tr>
-					<td colspan="2"><input type="submit" class="textenvoyer" value="Envoyer"/><a href="/authentification_et_motdepasse/login_form.php"><input type="button" class="textenvoyer" value="Annuler"/></a></td>
+					<td colspan="2"><a href="/authentification_et_motdepasse/redirection.php"><input type="submit" class="textenvoyer" value="S'enregistrer"/></a> <a href="/authentification_et_motdepasse/login_form.php"><input type="button" class="textenvoyer" value="Annuler"/></a></td>
 				</tr>
 				
 			</table>

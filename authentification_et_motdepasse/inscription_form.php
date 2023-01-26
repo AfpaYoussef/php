@@ -22,7 +22,7 @@
 				</tr>
 				<tr>
 					<td><label><b>Prénom:</b></label></td>
-					<td><input type="text" name="prenom" placeholder="saisir votre prenom"/></td>
+					<td><input type="text" name="prenom" placeholder="saisir votre prénom"/></td>
 				</tr>
 				<tr>
 					<td><label><b>Email:</b></label></td>
@@ -34,7 +34,7 @@
 				</tr>
 
                 <tr>
-					<td colspan="2"><input type="submit" class="textenvoyer" value="Envoyer"/>  <input type="reset" class="textenvoyer" value="Annuler"/></td>
+					<td colspan="2"><input type="submit" class="textenvoyer" value="Envoyer"/><a href="/authentification_et_motdepasse/login_form.php"><input type="button" class="textenvoyer" value="Annuler"/></a></td>
 				</tr>
 				
 			</table>

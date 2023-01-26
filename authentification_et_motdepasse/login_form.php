@@ -17,7 +17,9 @@
  <label><b>Mot de passe</b></label>
  <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
- <input type="submit" id='submit' class="textenvoyer" value='LOGIN' >
+ <input type="submit" id='submit' class="textenvoyer" value='Se connecter' >
+ <a href="/authentification_et_motdepasse/inscription_form.php"><input type="button" class="textenvoyer" value="Pas encore inscrit?"></a>
+
  <?php
  if(isset($_POST['erreur'])){
  $err = $_POST['erreur'];

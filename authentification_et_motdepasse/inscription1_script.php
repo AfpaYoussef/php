@@ -56,7 +56,7 @@ if(!preg_match('/^[[:alnum:]]+$/', $_POST['email']) && !preg_match('/^[[:alnum:]
         die("Fin du script (/authentification_et_motdepasse/login_script.php)");
     }
 
-        header("location:redirection.php");
+        header("location:redirection.html");
         exit;
     }
     
